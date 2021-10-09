@@ -29,37 +29,40 @@ namespace CiberWindowsForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.Button btnVerClientes;
+            this.lblInformacion = new System.Windows.Forms.Label();
+            btnVerClientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnVerClientes
             // 
-            this.button1.Location = new System.Drawing.Point(153, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            btnVerClientes.Location = new System.Drawing.Point(291, 196);
+            btnVerClientes.Name = "btnVerClientes";
+            btnVerClientes.Size = new System.Drawing.Size(147, 34);
+            btnVerClientes.TabIndex = 0;
+            btnVerClientes.Text = "Ver Clientes a la espera";
+            btnVerClientes.UseVisualStyleBackColor = true;
+            btnVerClientes.Click += new System.EventHandler(this.btnVerClientes_Click);
             // 
-            // label1
+            // lblInformacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Location = new System.Drawing.Point(72, 53);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(38, 15);
+            this.lblInformacion.TabIndex = 1;
+            this.lblInformacion.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(btnVerClientes);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,8 +70,8 @@ namespace CiberWindowsForm
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVerClientes;
+        private System.Windows.Forms.Label lblInformacion;
     }
 }
 

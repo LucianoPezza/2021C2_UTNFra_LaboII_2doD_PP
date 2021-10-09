@@ -7,6 +7,8 @@ namespace EL_CIBER
     {
         private List<Computadoras> computadora;
         private Queue<Clientes> clientardos;
+        private List<CabinaTelefonica> cabinaTelefonica;
+
 
         public List<Computadoras> Computadora
         {
@@ -28,7 +30,7 @@ namespace EL_CIBER
 
             foreach (Computadoras specs in this.computadora)
             {
-                sb.AppendLine(specs.Listar());
+                sb.AppendLine(specs.ToString());
             }
             return sb.ToString();
         }
@@ -42,21 +44,8 @@ namespace EL_CIBER
             }
             return sb.ToString();
         }
-        public static bool operator ==(Ciber c1, Computadoras e1)
-        {
-            foreach (Computadoras item in c1.Computadora)
-            {
-               if(item.Identificador==e1.Identificador)
-                {
-                    return true;
-                }    
-            }
-            return false;
-        }
-        public static bool operator !=(Ciber c1, Computadoras e1)
-        {
-            return !(c1 != e1);
-        }
+
+        
 
         public static Ciber operator +(Ciber c1, Computadoras e1)
         {

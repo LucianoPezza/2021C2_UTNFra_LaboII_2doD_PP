@@ -1,31 +1,57 @@
 ﻿namespace EL_CIBER
 {
-    public class CabinaTelefonica
+
+    public abstract class CabinaTelefonica
     {
-        private string tipo;
-        private string marca;
-        private long numeroTelefonico;
-        protected string Tipo
-        {
-            get
-            { return tipo; }
-        }
-        protected string Marca
-        {
-            get
-            { return marca; }
-        } protected long NumeroTelefonico
-        {
-            get
-            { return NumeroTelefonico; }
-        }
+        public enum ETipo { Disco, Teclado}
 
-        public CabinaTelefonica(string tipo, string marca,long numeroTelefonico)
+        protected string marca;
+        private ETipo tipo;
+        protected string identificador;
+        protected long numeroTelefonico;
+
+        public string Tipo
         {
-            this.tipo = tipo;
+            get
+            {
+                return this.marca;
+            }
+        }
+        protected ETipo Marca
+        {
+            get
+            {
+                return this.tipo;
+            }
+        }
+        public long NumeroTelefonico
+        {
+            get
+            {
+                return this.numeroTelefonico;
+            }
+            set
+            {
+                this.numeroTelefonico = value;
+            }
+        }
+        public abstract double Costo
+        {
+            get;
+            set;
+        }
+        public CabinaTelefonica(string marca, ETipo tipo, string identificador)
+        {
             this.marca = marca;
-            this.numeroTelefonico = numeroTelefonico;
+            this.tipo = tipo;
+            this.identificador = identificador;
         }
 
+        public virtual string ListarLlamada()
+        {
+            return $"Cabina:{identificador}" +
+                    $"\nMarca: {Marca}" +
+                    $"\nTipo de telefono {Tipo}";
+        }
     }
 }
