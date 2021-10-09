@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EL CIBER\EL CIBER.csproj" />
+    <ProjectReference Include="..\EL CIBER\Pezza.Luciano.PrimerParcial.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,18 +9,18 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Ciber c1 = new Ciber();
+            Ciber c1 = new Ciber(4);
 
-            Computadoras e1 = new Computadoras(new List<Computadoras.ESoftware>() { Computadoras.ESoftware.Ares, Computadoras.ESoftware.Icq,Computadoras.ESoftware.Messenger},
-            new List<Computadoras.EPerifericosDisponibles>() { Computadoras.EPerifericosDisponibles.Nada},
-            new List<Computadoras.EJuegosDisponibles>() { Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.DiabloII, Computadoras.EJuegosDisponibles.WarcraftIII},
-            Computadoras.EHardware.Pentium3, "C01",false);
-            
-            Computadoras e2 = new Computadoras(new List<Computadoras.ESoftware>() { Computadoras.ESoftware.Ares, Computadoras.ESoftware.Icq,Computadoras.ESoftware.Messenger},
-            new List<Computadoras.EPerifericosDisponibles>() { Computadoras.EPerifericosDisponibles.Nada},
-            new List<Computadoras.EJuegosDisponibles>() { Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.DiabloII, Computadoras.EJuegosDisponibles.WarcraftIII},
-            Computadoras.EHardware.Pentium3, "C02",false);
-          
+            Computadoras e1 = new Computadoras(new List<Computadoras.ESoftware>() { Computadoras.ESoftware.Ares, Computadoras.ESoftware.Icq, Computadoras.ESoftware.Messenger },
+            new List<Computadoras.EPerifericosDisponibles>() { Computadoras.EPerifericosDisponibles.Nada },
+            new List<Computadoras.EJuegosDisponibles>() { Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.DiabloII, Computadoras.EJuegosDisponibles.WarcraftIII },
+            Computadoras.EHardware.Pentium3, "C01", false);
+
+            Computadoras e2 = new Computadoras(new List<Computadoras.ESoftware>() { Computadoras.ESoftware.Ares, Computadoras.ESoftware.Icq, Computadoras.ESoftware.Messenger },
+            new List<Computadoras.EPerifericosDisponibles>() { Computadoras.EPerifericosDisponibles.Nada },
+            new List<Computadoras.EJuegosDisponibles>() { Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.CounterStrike, Computadoras.EJuegosDisponibles.DiabloII, Computadoras.EJuegosDisponibles.WarcraftIII },
+            Computadoras.EHardware.Pentium3, "C02", false);
+
             Clientes cli1 = new Clientes("Luciano", 321, "Pezza", 20, false);
             Clientes cli2 = new Clientes("Lucas", 123, "Perez", 69, false);
             Clientes cli3 = new Clientes("Mauricio", 32, "Cerizza", 30, false);
@@ -34,15 +34,15 @@ namespace ConsoleApp1
             Clientes cli8 = new Clientes("Leando", 8, "Montenegro", 18, false);
             Clientes cli9 = new Clientes("Homero", 9, "Simpson", 40, false);
             Clientes cli10 = new Clientes("Troy", 10, "McClure", 40, false);
-            Llamada call1 = new Llamada("Delos", Llamada.ETipo.Teclado,"T01");
-            
+            Llamada call1 = new Llamada("Cualquiera", Llamada.ETipo.Teclado, "T01");
+            Llamada call2 = new Llamada("Cualquiera", Llamada.ETipo.Teclado, "T02");
+            Llamada call3 = new Llamada("Cualquiera", Llamada.ETipo.Teclado, "T03");
+            Llamada call4 = new Llamada("Cualquiera", Llamada.ETipo.Teclado, "T04");
 
 
             c1 += e1;
             c1 += e2;
-            //c1 += e3;
-            //c1 += e4;
-            //c1 += e5;
+           
 
             c1 += cli1;
             c1 += cli2;
@@ -54,16 +54,21 @@ namespace ConsoleApp1
             c1 += cli8;
             c1 += cli9;
             c1 += cli10;
+          
+            c1.Llamadas[0] = call1;
+            c1.Llamadas[1] = call2;
+            c1.Llamadas[2] = call3;
+            c1.Llamadas[3] = call4;
+            double costo = 0;
+            long []numerardo = { 541155,121212,548888,-15156156};
+            for (int i = 0; i < c1.Llamadas.Length; i++)
+            {
+               costo= c1.Llamadas[i].calcularCostoLlamada(numerardo[i]);
+            }
 
-            Console.WriteLine(call1.ListarLlamada());
-            long numerardo = 54451153;
-            
-            double costo=0;
-            costo=call1.calcularCostoLlamada(numerardo);
-            Console.WriteLine(costo);
 
-            Console.WriteLine("\n\n");
-            Console.WriteLine(call1.ListarLlamada());
+            Console.WriteLine(c1.listarLlamadas()); 
+           
             //double costo;
             //long NumeroTelefonico = 54113340;
             //string numeroTel = NumeroTelefonico.ToString();

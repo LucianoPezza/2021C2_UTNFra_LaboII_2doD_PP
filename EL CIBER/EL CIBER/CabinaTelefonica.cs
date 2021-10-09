@@ -53,5 +53,6 @@
                     $"\nMarca: {Marca}" +
                     $"\nTipo de telefono {Tipo}";
         }
+        
     }
 }

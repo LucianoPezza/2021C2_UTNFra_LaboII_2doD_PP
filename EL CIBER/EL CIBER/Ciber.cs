@@ -7,21 +7,26 @@ namespace EL_CIBER
     {
         private List<Computadoras> computadora;
         private Queue<Clientes> clientardos;
-        private List<CabinaTelefonica> cabinaTelefonica;
+        private Llamada[] llamadas;
 
 
         public List<Computadoras> Computadora
         {
             get { return this.computadora; }
         }
+        public Llamada[] Llamadas
+        {
+            get { return this.llamadas; }
+        }
         public Queue<Clientes>Clientes
         {
             get { return this.clientardos; }
         }
-        public Ciber()
+        public Ciber(int index)
         {
             this.computadora = new List<Computadoras>();
             this.clientardos = new Queue<Clientes>();
+            this.llamadas = new Llamada[index];
         }
 
         public string listarCompus()
@@ -44,7 +49,18 @@ namespace EL_CIBER
             }
             return sb.ToString();
         }
+        public string listarLlamadas()
+        {
+            StringBuilder sb = new StringBuilder();
 
+            for (int i = 0; i < this.llamadas.Length; i++)
+            {
+                sb.AppendLine(this.llamadas[i].ToString());
+            }
+                
+            
+            return sb.ToString();
+        }
         
 
         public static Ciber operator +(Ciber c1, Computadoras e1)
@@ -71,5 +87,18 @@ namespace EL_CIBER
             c1.clientardos.Enqueue(cli1);
             return c1;
         }
+        //public static Ciber operator +(Ciber c1, Llamada cab1)
+        //{
+        //    foreach  (Llamada cab in c1.llamadas)
+        //    {
+        //        if(cab==cab1)
+        //        {
+        //            return c1;
+        //        }
+        //    }
+        //    c1.llamadas.Add(cab1);
+        //    return c1;
+        //}
+
     }
 }

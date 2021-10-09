@@ -31,6 +31,8 @@ namespace EL_CIBER
             NumeroTelefonico = numeroTelefonicoAux;
             string numeroTel = NumeroTelefonico.ToString();
             Costo = 0;
+            if(numeroTel.Length>2)
+            {     
             if(numeroTel.Substring(2,2)=="11")
             {
                 Costo = 2;
@@ -43,12 +45,24 @@ namespace EL_CIBER
             {
                 Costo = 5;
             }
-
+            }
+            else
+            {
+                Costo = 0;
+            }
             return Costo;
         }
         public override string ToString()
         {
             return ListarLlamada();
+        }
+        public static bool operator ==(Llamada c1, Llamada c2)
+        {
+            return c1.identificador == c2.identificador;
+        }
+        public static bool operator !=(Llamada c1, Llamada c2)
+        {
+            return !(c1 == c2);
         }
     }
 }
