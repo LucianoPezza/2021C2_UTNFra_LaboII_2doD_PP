@@ -29,7 +29,7 @@ namespace CiberWindowsForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.brnClientesDesatendidos = new System.Windows.Forms.Button();
+            this.btnClientesDesatendidos = new System.Windows.Forms.Button();
             this.btnListarComputadoras = new System.Windows.Forms.Button();
             this.lblInformacionPersonal = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@ namespace CiberWindowsForm
             this.lstLlamadas = new System.Windows.Forms.ListBox();
             this.btnFinalizacionDeServicio = new System.Windows.Forms.Button();
             this.lstDeseoDeClientes = new System.Windows.Forms.ListBox();
-            this.btnIngresarIdentificadorComputadora = new System.Windows.Forms.Button();
+            this.btnComputadoraIdentificador = new System.Windows.Forms.Button();
             this.lblComputadoraIdentificador = new System.Windows.Forms.Label();
             this.txtComputadoraIdentificador = new System.Windows.Forms.TextBox();
             this.btnTiempodePC = new System.Windows.Forms.Button();
@@ -52,33 +52,33 @@ namespace CiberWindowsForm
             this.lblTiempoDeLaPc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // brnClientesDesatendidos
+            // btnClientesDesatendidos
             // 
-            this.brnClientesDesatendidos.AllowDrop = true;
-            this.brnClientesDesatendidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.brnClientesDesatendidos.AutoSize = true;
-            this.brnClientesDesatendidos.BackColor = System.Drawing.Color.LightSlateGray;
-            this.brnClientesDesatendidos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.brnClientesDesatendidos.ForeColor = System.Drawing.Color.AliceBlue;
-            this.brnClientesDesatendidos.Location = new System.Drawing.Point(1082, 836);
-            this.brnClientesDesatendidos.Name = "brnClientesDesatendidos";
-            this.brnClientesDesatendidos.Size = new System.Drawing.Size(273, 42);
-            this.brnClientesDesatendidos.TabIndex = 0;
-            this.brnClientesDesatendidos.Text = "Listar clientes desatendidos";
-            this.brnClientesDesatendidos.UseVisualStyleBackColor = false;
-            this.brnClientesDesatendidos.Click += new System.EventHandler(this.brnClientesDesatendidos_Click);
+            this.btnClientesDesatendidos.AllowDrop = true;
+            this.btnClientesDesatendidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClientesDesatendidos.AutoSize = true;
+            this.btnClientesDesatendidos.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnClientesDesatendidos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClientesDesatendidos.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnClientesDesatendidos.Location = new System.Drawing.Point(962, 877);
+            this.btnClientesDesatendidos.Name = "btnClientesDesatendidos";
+            this.btnClientesDesatendidos.Size = new System.Drawing.Size(336, 42);
+            this.btnClientesDesatendidos.TabIndex = 0;
+            this.btnClientesDesatendidos.Text = "Listar clientes desatendidos";
+            this.btnClientesDesatendidos.UseVisualStyleBackColor = false;
+            this.btnClientesDesatendidos.Click += new System.EventHandler(this.brnClientesDesatendidos_Click);
             // 
             // btnListarComputadoras
             // 
             this.btnListarComputadoras.AllowDrop = true;
-            this.btnListarComputadoras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListarComputadoras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnListarComputadoras.AutoSize = true;
             this.btnListarComputadoras.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnListarComputadoras.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnListarComputadoras.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnListarComputadoras.Location = new System.Drawing.Point(1361, 836);
+            this.btnListarComputadoras.Location = new System.Drawing.Point(1301, 877);
             this.btnListarComputadoras.Name = "btnListarComputadoras";
-            this.btnListarComputadoras.Size = new System.Drawing.Size(243, 42);
+            this.btnListarComputadoras.Size = new System.Drawing.Size(306, 42);
             this.btnListarComputadoras.TabIndex = 1;
             this.btnListarComputadoras.Text = "Listar Computadoras";
             this.btnListarComputadoras.UseVisualStyleBackColor = false;
@@ -100,14 +100,14 @@ namespace CiberWindowsForm
             // btnAsignar
             // 
             this.btnAsignar.AllowDrop = true;
-            this.btnAsignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAsignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAsignar.AutoSize = true;
             this.btnAsignar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnAsignar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAsignar.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnAsignar.Location = new System.Drawing.Point(1610, 836);
+            this.btnAsignar.Location = new System.Drawing.Point(1616, 877);
             this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(234, 42);
+            this.btnAsignar.Size = new System.Drawing.Size(297, 42);
             this.btnAsignar.TabIndex = 3;
             this.btnAsignar.Text = "Asignar cabina o computadora";
             this.btnAsignar.UseVisualStyleBackColor = false;
@@ -115,34 +115,35 @@ namespace CiberWindowsForm
             // 
             // rtbListarClientesDesatendidos
             // 
+            this.rtbListarClientesDesatendidos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rtbListarClientesDesatendidos.BackColor = System.Drawing.Color.LightSlateGray;
             this.rtbListarClientesDesatendidos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rtbListarClientesDesatendidos.ForeColor = System.Drawing.Color.Azure;
             this.rtbListarClientesDesatendidos.Location = new System.Drawing.Point(13, 37);
             this.rtbListarClientesDesatendidos.Name = "rtbListarClientesDesatendidos";
-            this.rtbListarClientesDesatendidos.Size = new System.Drawing.Size(606, 732);
+            this.rtbListarClientesDesatendidos.Size = new System.Drawing.Size(458, 732);
             this.rtbListarClientesDesatendidos.TabIndex = 4;
             this.rtbListarClientesDesatendidos.Text = "";
             // 
             // rtbListarComputadoras
             // 
-            this.rtbListarComputadoras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbListarComputadoras.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rtbListarComputadoras.BackColor = System.Drawing.Color.LightSlateGray;
             this.rtbListarComputadoras.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rtbListarComputadoras.ForeColor = System.Drawing.Color.Azure;
-            this.rtbListarComputadoras.Location = new System.Drawing.Point(1238, 37);
+            this.rtbListarComputadoras.Location = new System.Drawing.Point(1431, 37);
             this.rtbListarComputadoras.Name = "rtbListarComputadoras";
-            this.rtbListarComputadoras.Size = new System.Drawing.Size(606, 732);
+            this.rtbListarComputadoras.Size = new System.Drawing.Size(476, 732);
             this.rtbListarComputadoras.TabIndex = 5;
             this.rtbListarComputadoras.Text = "";
+            this.rtbListarComputadoras.TextChanged += new System.EventHandler(this.rtbListarComputadoras_TextChanged);
             // 
             // txtIdentificador
             // 
-            this.txtIdentificador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIdentificador.Location = new System.Drawing.Point(1049, 99);
+            this.txtIdentificador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtIdentificador.Location = new System.Drawing.Point(1145, 108);
             this.txtIdentificador.Name = "txtIdentificador";
-            this.txtIdentificador.Size = new System.Drawing.Size(135, 23);
+            this.txtIdentificador.Size = new System.Drawing.Size(150, 23);
             this.txtIdentificador.TabIndex = 6;
             // 
             // lblCabina
@@ -153,7 +154,7 @@ namespace CiberWindowsForm
             this.lblCabina.AutoSize = true;
             this.lblCabina.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblCabina.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblCabina.Location = new System.Drawing.Point(963, 36);
+            this.lblCabina.Location = new System.Drawing.Point(1009, 46);
             this.lblCabina.Name = "lblCabina";
             this.lblCabina.Size = new System.Drawing.Size(269, 50);
             this.lblCabina.TabIndex = 7;
@@ -162,19 +163,18 @@ namespace CiberWindowsForm
             // btnIngersarCabina
             // 
             this.btnIngersarCabina.AllowDrop = true;
-            this.btnIngersarCabina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngersarCabina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIngersarCabina.AutoSize = true;
             this.btnIngersarCabina.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnIngersarCabina.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnIngersarCabina.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnIngersarCabina.Location = new System.Drawing.Point(1049, 142);
+            this.btnIngersarCabina.Location = new System.Drawing.Point(1145, 151);
             this.btnIngersarCabina.Name = "btnIngersarCabina";
-            this.btnIngersarCabina.Size = new System.Drawing.Size(183, 30);
+            this.btnIngersarCabina.Size = new System.Drawing.Size(150, 30);
             this.btnIngersarCabina.TabIndex = 8;
             this.btnIngersarCabina.Text = "Ingresar";
             this.btnIngersarCabina.UseVisualStyleBackColor = false;
-            this.btnIngersarCabina.Click += new System.EventHandler(this.btnIngersarTelefono_Click);
+            this.btnIngersarCabina.Click += new System.EventHandler(this.btnIngersarCabina_Click);
             // 
             // btnNumeroTelefonico
             // 
@@ -185,9 +185,9 @@ namespace CiberWindowsForm
             this.btnNumeroTelefonico.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnNumeroTelefonico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNumeroTelefonico.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnNumeroTelefonico.Location = new System.Drawing.Point(1049, 302);
+            this.btnNumeroTelefonico.Location = new System.Drawing.Point(1145, 311);
             this.btnNumeroTelefonico.Name = "btnNumeroTelefonico";
-            this.btnNumeroTelefonico.Size = new System.Drawing.Size(183, 30);
+            this.btnNumeroTelefonico.Size = new System.Drawing.Size(153, 30);
             this.btnNumeroTelefonico.TabIndex = 11;
             this.btnNumeroTelefonico.Text = "Ingresar";
             this.btnNumeroTelefonico.UseVisualStyleBackColor = false;
@@ -201,7 +201,7 @@ namespace CiberWindowsForm
             this.lblNumeroTelefonico.AutoSize = true;
             this.lblNumeroTelefonico.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblNumeroTelefonico.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblNumeroTelefonico.Location = new System.Drawing.Point(1058, 205);
+            this.lblNumeroTelefonico.Location = new System.Drawing.Point(1124, 214);
             this.lblNumeroTelefonico.Name = "lblNumeroTelefonico";
             this.lblNumeroTelefonico.Size = new System.Drawing.Size(174, 25);
             this.lblNumeroTelefonico.TabIndex = 10;
@@ -211,9 +211,9 @@ namespace CiberWindowsForm
             // 
             this.txtNumeroTelefonico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumeroTelefonico.Location = new System.Drawing.Point(1049, 264);
+            this.txtNumeroTelefonico.Location = new System.Drawing.Point(1145, 273);
             this.txtNumeroTelefonico.Name = "txtNumeroTelefonico";
-            this.txtNumeroTelefonico.Size = new System.Drawing.Size(183, 23);
+            this.txtNumeroTelefonico.Size = new System.Drawing.Size(153, 23);
             this.txtNumeroTelefonico.TabIndex = 9;
             // 
             // lstLlamadas
@@ -225,23 +225,22 @@ namespace CiberWindowsForm
             this.lstLlamadas.ForeColor = System.Drawing.Color.Azure;
             this.lstLlamadas.FormattingEnabled = true;
             this.lstLlamadas.ItemHeight = 20;
-            this.lstLlamadas.Location = new System.Drawing.Point(625, 99);
+            this.lstLlamadas.Location = new System.Drawing.Point(519, 35);
             this.lstLlamadas.Name = "lstLlamadas";
-            this.lstLlamadas.Size = new System.Drawing.Size(418, 204);
+            this.lstLlamadas.Size = new System.Drawing.Size(481, 204);
             this.lstLlamadas.TabIndex = 12;
             // 
             // btnFinalizacionDeServicio
             // 
             this.btnFinalizacionDeServicio.AllowDrop = true;
-            this.btnFinalizacionDeServicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinalizacionDeServicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizacionDeServicio.AutoSize = true;
             this.btnFinalizacionDeServicio.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnFinalizacionDeServicio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnFinalizacionDeServicio.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnFinalizacionDeServicio.Location = new System.Drawing.Point(1610, 794);
+            this.btnFinalizacionDeServicio.Location = new System.Drawing.Point(1616, 830);
             this.btnFinalizacionDeServicio.Name = "btnFinalizacionDeServicio";
-            this.btnFinalizacionDeServicio.Size = new System.Drawing.Size(234, 36);
+            this.btnFinalizacionDeServicio.Size = new System.Drawing.Size(297, 41);
             this.btnFinalizacionDeServicio.TabIndex = 13;
             this.btnFinalizacionDeServicio.Text = "Finalizar servicio";
             this.btnFinalizacionDeServicio.UseVisualStyleBackColor = false;
@@ -256,37 +255,34 @@ namespace CiberWindowsForm
             this.lstDeseoDeClientes.ForeColor = System.Drawing.Color.Azure;
             this.lstDeseoDeClientes.FormattingEnabled = true;
             this.lstDeseoDeClientes.ItemHeight = 20;
-            this.lstDeseoDeClientes.Location = new System.Drawing.Point(625, 425);
+            this.lstDeseoDeClientes.Location = new System.Drawing.Point(519, 368);
             this.lstDeseoDeClientes.Name = "lstDeseoDeClientes";
-            this.lstDeseoDeClientes.Size = new System.Drawing.Size(418, 204);
+            this.lstDeseoDeClientes.Size = new System.Drawing.Size(481, 204);
             this.lstDeseoDeClientes.TabIndex = 20;
             // 
-            // btnIngresarIdentificadorComputadora
+            // btnComputadoraIdentificador
             // 
-            this.btnIngresarIdentificadorComputadora.AllowDrop = true;
-            this.btnIngresarIdentificadorComputadora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngresarIdentificadorComputadora.AutoSize = true;
-            this.btnIngresarIdentificadorComputadora.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnIngresarIdentificadorComputadora.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnIngresarIdentificadorComputadora.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnIngresarIdentificadorComputadora.Location = new System.Drawing.Point(1049, 454);
-            this.btnIngresarIdentificadorComputadora.Name = "btnIngresarIdentificadorComputadora";
-            this.btnIngresarIdentificadorComputadora.Size = new System.Drawing.Size(183, 30);
-            this.btnIngresarIdentificadorComputadora.TabIndex = 16;
-            this.btnIngresarIdentificadorComputadora.Text = "Ingresar";
-            this.btnIngresarIdentificadorComputadora.UseVisualStyleBackColor = false;
-            this.btnIngresarIdentificadorComputadora.Click += new System.EventHandler(this.btnIngresarIdentificador_Click);
+            this.btnComputadoraIdentificador.AllowDrop = true;
+            this.btnComputadoraIdentificador.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnComputadoraIdentificador.AutoSize = true;
+            this.btnComputadoraIdentificador.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnComputadoraIdentificador.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnComputadoraIdentificador.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnComputadoraIdentificador.Location = new System.Drawing.Point(1145, 463);
+            this.btnComputadoraIdentificador.Name = "btnComputadoraIdentificador";
+            this.btnComputadoraIdentificador.Size = new System.Drawing.Size(153, 30);
+            this.btnComputadoraIdentificador.TabIndex = 16;
+            this.btnComputadoraIdentificador.Text = "Ingresar";
+            this.btnComputadoraIdentificador.UseVisualStyleBackColor = false;
+            this.btnComputadoraIdentificador.Click += new System.EventHandler(this.btnIngresarIdentificador_Click);
             // 
             // lblComputadoraIdentificador
             // 
-            this.lblComputadoraIdentificador.AllowDrop = true;
-            this.lblComputadoraIdentificador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblComputadoraIdentificador.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblComputadoraIdentificador.AutoSize = true;
             this.lblComputadoraIdentificador.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblComputadoraIdentificador.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblComputadoraIdentificador.Location = new System.Drawing.Point(943, 359);
+            this.lblComputadoraIdentificador.Location = new System.Drawing.Point(1009, 368);
             this.lblComputadoraIdentificador.Name = "lblComputadoraIdentificador";
             this.lblComputadoraIdentificador.Size = new System.Drawing.Size(289, 50);
             this.lblComputadoraIdentificador.TabIndex = 15;
@@ -294,25 +290,23 @@ namespace CiberWindowsForm
             // 
             // txtComputadoraIdentificador
             // 
-            this.txtComputadoraIdentificador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComputadoraIdentificador.Location = new System.Drawing.Point(1049, 425);
+            this.txtComputadoraIdentificador.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtComputadoraIdentificador.Location = new System.Drawing.Point(1145, 434);
             this.txtComputadoraIdentificador.Name = "txtComputadoraIdentificador";
-            this.txtComputadoraIdentificador.Size = new System.Drawing.Size(135, 23);
+            this.txtComputadoraIdentificador.Size = new System.Drawing.Size(150, 23);
             this.txtComputadoraIdentificador.TabIndex = 14;
             // 
             // btnTiempodePC
             // 
             this.btnTiempodePC.AllowDrop = true;
-            this.btnTiempodePC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTiempodePC.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTiempodePC.AutoSize = true;
             this.btnTiempodePC.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnTiempodePC.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTiempodePC.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnTiempodePC.Location = new System.Drawing.Point(1049, 582);
+            this.btnTiempodePC.Location = new System.Drawing.Point(1145, 591);
             this.btnTiempodePC.Name = "btnTiempodePC";
-            this.btnTiempodePC.Size = new System.Drawing.Size(183, 30);
+            this.btnTiempodePC.Size = new System.Drawing.Size(153, 30);
             this.btnTiempodePC.TabIndex = 22;
             this.btnTiempodePC.Text = "Ingresar";
             this.btnTiempodePC.UseVisualStyleBackColor = false;
@@ -320,22 +314,20 @@ namespace CiberWindowsForm
             // 
             // txtTiempoDePC
             // 
-            this.txtTiempoDePC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTiempoDePC.Location = new System.Drawing.Point(1049, 553);
+            this.txtTiempoDePC.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtTiempoDePC.Location = new System.Drawing.Point(1145, 562);
             this.txtTiempoDePC.Name = "txtTiempoDePC";
-            this.txtTiempoDePC.Size = new System.Drawing.Size(135, 23);
+            this.txtTiempoDePC.Size = new System.Drawing.Size(153, 23);
             this.txtTiempoDePC.TabIndex = 21;
             // 
             // lblTiempoDeLaPc
             // 
             this.lblTiempoDeLaPc.AllowDrop = true;
-            this.lblTiempoDeLaPc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTiempoDeLaPc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblTiempoDeLaPc.AutoSize = true;
             this.lblTiempoDeLaPc.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblTiempoDeLaPc.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblTiempoDeLaPc.Location = new System.Drawing.Point(1049, 487);
+            this.lblTiempoDeLaPc.Location = new System.Drawing.Point(1009, 496);
             this.lblTiempoDeLaPc.Name = "lblTiempoDeLaPc";
             this.lblTiempoDeLaPc.Size = new System.Drawing.Size(171, 50);
             this.lblTiempoDeLaPc.TabIndex = 23;
@@ -343,15 +335,16 @@ namespace CiberWindowsForm
             // 
             // FormPrincipal
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1856, 931);
+            this.ClientSize = new System.Drawing.Size(1919, 931);
             this.Controls.Add(this.lblTiempoDeLaPc);
             this.Controls.Add(this.btnTiempodePC);
             this.Controls.Add(this.txtTiempoDePC);
             this.Controls.Add(this.lstDeseoDeClientes);
-            this.Controls.Add(this.btnIngresarIdentificadorComputadora);
+            this.Controls.Add(this.btnComputadoraIdentificador);
             this.Controls.Add(this.lblComputadoraIdentificador);
             this.Controls.Add(this.txtComputadoraIdentificador);
             this.Controls.Add(this.btnFinalizacionDeServicio);
@@ -367,7 +360,7 @@ namespace CiberWindowsForm
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.lblInformacionPersonal);
             this.Controls.Add(this.btnListarComputadoras);
-            this.Controls.Add(this.brnClientesDesatendidos);
+            this.Controls.Add(this.btnClientesDesatendidos);
             this.Name = "FormPrincipal";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
@@ -378,7 +371,7 @@ namespace CiberWindowsForm
 
         #endregion
 
-        private System.Windows.Forms.Button brnClientesDesatendidos;
+        private System.Windows.Forms.Button btnClientesDesatendidos;
         private System.Windows.Forms.Button btnListarComputadoras;
         private System.Windows.Forms.Label lblInformacionPersonal;
         private System.Windows.Forms.Button btnAsignar;
@@ -393,7 +386,7 @@ namespace CiberWindowsForm
         private System.Windows.Forms.ListBox lstLlamadas;
         private System.Windows.Forms.Button btnFinalizacionDeServicio;
         private System.Windows.Forms.ListBox lstDeseoDeClientes;
-        private System.Windows.Forms.Button btnIngresarIdentificadorComputadora;
+        private System.Windows.Forms.Button btnComputadoraIdentificador;
         private System.Windows.Forms.Label lblComputadoraIdentificador;
         private System.Windows.Forms.TextBox txtComputadoraIdentificador;
         private System.Windows.Forms.Button btnTiempodePC;

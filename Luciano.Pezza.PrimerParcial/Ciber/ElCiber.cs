@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace Ciber
@@ -8,14 +7,14 @@ namespace Ciber
     {
         private List<Computadoras> computadora;
         private Queue<Clientes> clientardos;
-        private List<Llamada> llamadas;
+        private List<Telefono> llamadas;
 
 
         public List<Computadoras> Computadora
         {
             get { return this.computadora; }
         }
-        public List<Llamada> Llamadas
+        public List<Telefono> Llamadas
         {
             get { return this.llamadas; }
         }
@@ -27,7 +26,7 @@ namespace Ciber
         {
             this.computadora = new List<Computadoras>();
             this.clientardos = new Queue<Clientes>();
-            this.llamadas = new List<Llamada>();
+            this.llamadas = new List<Telefono>();
         }
 
         public string listarCompus()
@@ -36,14 +35,9 @@ namespace Ciber
 
             foreach (Computadoras specs in this.computadora)
             {
-                if (specs.Estado == true)
+                if (specs.Estado == false)
                 {
-                    sb.AppendLine("Pc En uso: \n" + specs.ToString());
-                    sb.AppendLine("---------------------------------------------------------------");
-                }
-                else
-                {
-                    sb.AppendLine("Pc desocupada \n" + specs.ToString());
+                    sb.AppendLine(specs.ToString());
                     sb.AppendLine("---------------------------------------------------------------");
                 }
             }
@@ -68,7 +62,7 @@ namespace Ciber
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (Llamada item in this.llamadas)
+            foreach (Telefono item in this.llamadas)
             {
                 sb.AppendLine(item.ToString());
             }
@@ -102,9 +96,9 @@ namespace Ciber
             c1.clientardos.Enqueue(cli1);
             return c1;
         }
-        public static ElCiber operator +(ElCiber c1, Llamada cab1)
+        public static ElCiber operator +(ElCiber c1, Telefono cab1)
         {
-            foreach (Llamada cab in c1.llamadas)
+            foreach (Telefono cab in c1.llamadas)
             {
                 if (cab == cab1)
                 {
@@ -116,5 +110,5 @@ namespace Ciber
         }
 
     }
-    
+
 }

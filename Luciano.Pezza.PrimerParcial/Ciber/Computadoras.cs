@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Ciber
 {
@@ -17,10 +16,14 @@ namespace Ciber
         private List<EPerifericosDisponibles> perifericos;
         private List<EJuegosDisponibles> juegos;
         private EHardware hardware;
+        private int tiempoDeUso;
         private string identificador;
-        public const double costo = 0.50;
         private bool estado;
-        DateTime date = new DateTime();
+        private double cobro;
+        private bool compuLibre;
+        Stopwatch temporizador = new Stopwatch();
+        private TimeSpan tiempoDeUsoLibreCalculado = new TimeSpan();
+
 
         public List<ESoftware> Software
         {
@@ -52,6 +55,31 @@ namespace Ciber
             get { return this.estado; }
             set { this.estado = value; }
         }
+        public int TiempoDeUso
+        {
+            get { return this.tiempoDeUso; }
+            set { this.tiempoDeUso = value; }
+        }
+        public double Cobro
+        {
+            get { return this.cobro; }
+            set { this.cobro = value; }
+        }
+        public TimeSpan TiempoDeUsoLibre
+        {
+            get { return this.tiempoDeUsoLibreCalculado; }
+            set { this.tiempoDeUsoLibreCalculado = value; }
+        }
+        public Stopwatch Temporizador
+        {
+            get { return this.temporizador; }
+            set { this.temporizador = value; }
+        }
+        public bool ComputadoraLibre
+        {
+            get { return this.compuLibre; }
+            set { this.compuLibre = value; }
+        }
 
         public Computadoras(List<ESoftware> software, List<EPerifericosDisponibles> perifericos, List<EJuegosDisponibles> juegos, EHardware hardware, string identificador, bool estado)
         {
@@ -61,12 +89,13 @@ namespace Ciber
             this.identificador = identificador;
             this.estado = estado;
             this.hardware = hardware;
+            this.cobro = 0.50;
         }
 
         public string Listar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"PC : {Identificador} ");
+            sb.AppendLine($"Identificador de PC : {Identificador} ");
             sb.AppendLine($"Hardware: {Hardware}\n");
 
             sb.AppendLine("Juegos disponibles: ");
@@ -85,7 +114,6 @@ namespace Ciber
                 sb.AppendLine(perfericos.ToString());
             }
             return sb.ToString();
-            
         }
 
         public static bool operator ==(Computadoras e1, Computadoras e2)

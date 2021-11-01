@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Ciber
 {
@@ -13,6 +10,9 @@ namespace Ciber
         protected string marca;
         private ETipo tipo;
         protected string identificador;
+        Stopwatch temporizador = new Stopwatch();
+        TimeSpan tiempoDeUsoLibreCalculado = new TimeSpan();
+
 
         public string Marca
         {
@@ -21,7 +21,7 @@ namespace Ciber
                 return this.marca;
             }
         }
-       
+
         public ETipo Tipo
         {
             get
@@ -29,6 +29,7 @@ namespace Ciber
                 return this.tipo;
             }
         }
+
         public bool Estado
         {
             get
@@ -53,20 +54,34 @@ namespace Ciber
             get;
             set;
         }
+
+        public TimeSpan TiempoDeUsoLibre
+        {
+            get { return this.tiempoDeUsoLibreCalculado; }
+            set { this.tiempoDeUsoLibreCalculado = value; }
+        }
+        public Stopwatch Temporizador
+        {
+            get { return this.temporizador; }
+            set { this.temporizador = value; }
+        }
+
+
+
         public CabinaTelefonica(string marca, ETipo tipo, string identificador, bool estado)
-        {
-            this.marca = marca;
-            this.tipo = tipo;
-            this.identificador = identificador;
-            this.estado = estado;
-        }
-
-        public virtual string ListarLlamada()
-        {
-            return $"Cabina:{identificador}" +
-                    $"\nMarca: {Marca}" +
-                    $"\nTipo de telefono {Tipo}";
-        }
-
+    {
+        this.marca = marca;
+        this.tipo = tipo;
+        this.identificador = identificador;
+        this.estado = estado;
     }
+
+    public virtual string ListarLlamada()
+    {
+        return $"Cabina:{identificador}" +
+                $"\nMarca: {Marca}" +
+                $"\nTipo de telefono {Tipo}";
+    }
+
+}
 }

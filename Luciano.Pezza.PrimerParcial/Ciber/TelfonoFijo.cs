@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ciber
 {
-    public class Llamada : CabinaTelefonica
+    public class TelfonoFijo : CabinaTelefonica
     {
         private double costo;
-        public Llamada(string marca, ETipo tipo, string identidicador, bool estado)
+        public TelfonoFijo(string marca, ETipo tipo, string identidicador, bool estado)
        : base(marca, tipo, identidicador,estado)
         {
 
@@ -56,11 +56,11 @@ namespace Ciber
         {
             return ListarLlamada();
         }
-        public static bool operator ==(Llamada c1, Llamada c2)
+        public static bool operator ==(TelfonoFijo c1, TelfonoFijo c2)
         {
             return c1.identificador == c2.identificador;
         }
-        public static bool operator !=(Llamada c1, Llamada c2)
+        public static bool operator !=(TelfonoFijo c1, TelfonoFijo c2)
         {
             return !(c1 == c2);
         }
