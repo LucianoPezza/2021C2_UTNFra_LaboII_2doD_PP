@@ -68,13 +68,13 @@ namespace CiberWindowsForm
                 }
             } 
             
-            foreach  (Telefono telefonoEnUso in cFinal.Llamadas)
-            {
-                if(telefonoEnUso.Estado==true)
-                {
-                    lstIdentificadoresFinales.Items.Add("Cabina: "+telefonoEnUso.Identificador);
-                }
-            }
+            //foreach  (Telefono telefonoEnUso in cFinal.Llamadas)
+            //{
+            //    if(telefonoEnUso.Estado==true)
+            //    {
+            //        lstIdentificadoresFinales.Items.Add("Cabina: "+telefonoEnUso.Identificador);
+            //    }
+            //}
 
 
             
